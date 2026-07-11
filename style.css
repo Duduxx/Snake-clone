@@ -1,0 +1,39 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+#playArea{
+    position: absolute;
+    width: 50rem;
+    height: 50rem;
+    top: 5%;
+    left: 5%;
+    background-color: green;
+}
+
+#snakeHead{
+    background-color: white;
+    position: relative;
+    margin: 0.2rem;
+    width: 1.7rem;
+    height: 1.7rem;
+    top: 0rem;
+    left: 0rem;
+
+}
+
+#apple{
+    background-color: red;
+    position: absolute;
+    width: 2rem;
+    height: 2rem;
+}
+
+.snake{
+    background-color: white;
+    position: absolute;
+    margin: 0.2rem;
+    width: 1.7rem;
+    height: 1.7rem;
+}
