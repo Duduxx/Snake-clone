@@ -16,7 +16,7 @@ let prevYAxisPos = 0;
 
 
 addEventListener("keydown", changeDirection);
-addEventListener("load", () => setInterval(moveSnake, 500));
+addEventListener("load", () => setInterval(moveSnake, 250));
 addEventListener("load", spawnApple);
 
 function changeDirection(event){    
