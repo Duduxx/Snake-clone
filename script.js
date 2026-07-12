@@ -143,6 +143,4 @@ This doesn't work as it will end up sending '2rem;2rem;' instead of '4rem': snak
 
 Bugs:
 Make sure the apple won't spawn on a snake part!
-Try to prevent the snake from turning left if it's currently going right.
-
 */
