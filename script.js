@@ -22,25 +22,32 @@ addEventListener("load", spawnApple);
 function changeDirection(event){    
     switch(event.code){
         case 'ArrowUp':
+            if(xAxisDir == 0 && yAxisDir == 2)
+                break;
             xAxisDir = 0;
             yAxisDir = -2;
             break;
         case 'ArrowRight':
+            if(xAxisDir == -2 && yAxisDir == 0)
+                break;
             xAxisDir = 2;
             yAxisDir = 0;
             break;
         case 'ArrowDown':
+            if(xAxisDir == 0 && yAxisDir == -2)
+                break;
             xAxisDir = 0;
             yAxisDir = 2;
             break;
         case 'ArrowLeft':
+            if(xAxisDir == 2 && yAxisDir == 0)
+                break;
             xAxisDir = -2;
             yAxisDir = 0;
             break;
         default:
             break;
     }
-
 }
 
 function moveSnake(){
@@ -81,7 +88,6 @@ function spawnApple(){
     apple.style.left = xAxisApple + 'rem';
     apple.style.top = yAxisApple + 'rem';
 
-
 }
 
 function onApple(){
@@ -91,22 +97,19 @@ function onApple(){
     const appleY = apple.style.top;
 
     if (snakeX === appleX && snakeY === appleY){
-        //TO DO:
-        //Add a way to lengthen the snake
-        //maybe childNode and className will help in doing this
         addSnake();
         spawnApple();
     }
 }
 
 function addSnake(){
-    //This adds more to the snake body, needs a lot more work
     const snakePart = document.createElement('div');
     snakePart.className = 'snake';
     snakePart.style.left = xAxisPos + 'rem';
     snakePart.style.top = yAxisPos + 'rem';
     playArea.appendChild(snakePart);
     snakeBody.push(snakePart);
+
 }
 
 function bodyLogic(){
